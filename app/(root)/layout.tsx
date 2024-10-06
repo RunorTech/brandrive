@@ -21,7 +21,7 @@ export default async function RootLayout({
       </ScrollArea>
       <div className='bg-blue-700 h-full w-full relative'>
         <div className='mt-12'>
-        <BarIcon/>
+          <BarIcon />
         </div>
         <div className='absolute -left-[9.5rem] h-full top-0 flex items-center'>
           <RightSideBar />
