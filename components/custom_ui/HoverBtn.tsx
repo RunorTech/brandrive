@@ -4,6 +4,7 @@ import {
     HoverCardContent,
     HoverCardTrigger,
 } from "@/components/ui/hover-card"
+import { IoIosArrowForward } from 'react-icons/io';
 
 interface HoverBtnProps {
     className?: string;
@@ -11,14 +12,15 @@ interface HoverBtnProps {
     btnText?: string;
     children?: ReactNode;
 }
-const HoverBtn: React.FC<HoverBtnProps> = ({ className , btnText, children, classNameContent }) => {
+const HoverBtn: React.FC<HoverBtnProps> = ({ className , btnText, children, classNameContent}) => {
     return (
 
         <HoverCard>
 
             <HoverCardTrigger>
-                <div className={`${className}`}>
-                    {btnText}
+                <div className={`${className} flex gap-2 justify-center items-center `}>
+                    <span>{btnText}</span>
+                    <span className='text-xl'><IoIosArrowForward /></span>
                 </div>
             </HoverCardTrigger>
 

@@ -7,7 +7,6 @@ import { IoSettingsOutline } from 'react-icons/io5'
 import profileIMg from '@/public/$2b$04$9I3g3eiitPQhWUShqofLOMDIAQ6IsDZwiCFAZpkRBrfsP7giQsS.png'
 import { RiArrowDropDownLine } from 'react-icons/ri'
 import HoverBtn from './HoverBtn'
-
 const SideBarDrop = () => {
     const [openSideDrop, setOpenSideDrop] = useState(false)
     const sideBarDataDrop = [
@@ -71,14 +70,14 @@ const SideBarDrop = () => {
                         <div >
                             <HoverBtn className='bg-blue-950 px-2 w-full py-3 rounded-lg text-white text-sm text-center '
                                 btnText='Switch to Business'
-                                classNameContent='bg-blue-950 text-white p-3 w-56 rounded-2xl  '
+                                classNameContent='bg-blue-950 text-white p-3 w-56 rounded-2xl'
                             >
                                 {sideBarHoverData.map(data => (
                                     <div 
                                     key={data.$id}
                                     className='  w-full mt-4  mb-4'>
                                         <div className='w-full flex justify-between items-center mb-4 '>
-                                            <p className='text-xs font-thin'>{data.name}</p>
+                                            <p className='text-xs font-thin'><span>{data.name}</span></p>
                                             <button className='text-[0.65rem] font-thin bg-gray-200 text-black px-2'>{data.btntext}</button>
                                         </div>
                                         <hr className='border-gray-400' />
